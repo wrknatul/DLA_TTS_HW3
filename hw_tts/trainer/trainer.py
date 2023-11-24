@@ -1,7 +1,7 @@
 import typing as tp
 import torch
 
-import hw_tts.waveglow as waveglow
+import hw_tts.waveglow
 import hw_tts.synthesis.synthesis as synthesis
 import hw_tts.synthesis.utils
 
