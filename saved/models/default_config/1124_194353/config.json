@@ -1,0 +1,94 @@
+{
+    "name": "default_config",
+    "n_gpu": 0,
+    "arch": {
+        "type": "FastSpeech",
+        "args": {
+            "vocab_size": 300,
+            "max_seq_len": 3000,
+            "encoder_dim": 256,
+            "encoder_n_layer": 4,
+            "encoder_head": 2,
+            "encoder_conv1d_filter_size": 1024,
+            "decoder_dim": 256,
+            "decoder_n_layer": 4,
+            "decoder_head": 2,
+            "decoder_conv1d_filter_size": 1024,
+            "fft_conv1d_kernel": [
+                9,
+                1
+            ],
+            "fft_conv1d_padding": [
+                4,
+                0
+            ],
+            "duration_predictor_filter_size": 256,
+            "duration_predictor_kernel_size": 3,
+            "dropout": 0.1,
+            "PAD": 0,
+            "num_mels": 80,
+            "pitch_stat": [
+                0.0,
+                870
+            ],
+            "energy_stat": [
+                0.0,
+                490
+            ]
+        }
+    },
+    "data": {
+        "batch_size": 16,
+        "batch_expand_size": 32,
+        "num_workers": 5,
+        "dataset": {
+            "type": "BufferDataset",
+            "args": {
+                "data_path": "./data/train.txt",
+                "mel_ground_truth": "./mels",
+                "alignment_path": "./alignments",
+                "text_cleaners": [
+                    "english_cleaners"
+                ]
+            },
+            "module": "hw_tts.datasets"
+        }
+    },
+    "optimizer": {
+        "type": "AdamW",
+        "args": {
+            "lr": 0.001,
+            "weight_decay": 1e-06,
+            "betas": [
+                0.9,
+                0.98
+            ],
+            "eps": 1e-09
+        }
+    },
+    "loss": {
+        "type": "FastSpeechLoss",
+        "args": {}
+    },
+    "lr_scheduler": {
+        "type": "OneCycleLR",
+        "args": {
+            "steps_per_epoch": 800,
+            "epochs": 220,
+            "anneal_strategy": "cos",
+            "max_lr": 0.001,
+            "pct_start": 0.1
+        }
+    },
+    "trainer": {
+        "epochs": 200,
+        "save_dir": "saved/",
+        "save_period": 5,
+        "verbosity": 2,
+        "early_stop": 100,
+        "visualize": "wandb",
+        "wandb_project": "tts_project",
+        "len_epoch": 25,
+        "grad_norm_clip": 1
+    }
+}

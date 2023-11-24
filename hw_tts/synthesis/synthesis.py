@@ -16,6 +16,6 @@ def synthesis(model, device, waveglow_model, text, alpha=1.0, alpha_p=1.0, alpha
 
     mel_cpu, mel_cuda = mel[0].cpu().transpose(0, 1), mel.contiguous().transpose(1, 2)
     if path is None:
-        return hw_tts.waveglow.inference.get_wav(mel_cuda, waveglow_model)
+        return hw_tts.waveglow.inference.get_wav(mel_cpu, waveglow_model)
     else:
-        hw_tts.waveglow.inference.inference(mel_cuda, waveglow_model, path)
+        hw_tts.waveglow.inference.inference(mel_cpu, waveglow_model, path)

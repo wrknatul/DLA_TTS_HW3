@@ -47,7 +47,6 @@ def get_data_to_buffer(data_path, mel_ground_truth, alignment_path, text_cleaner
             hparams_audio.sampling_rate,
             frame_period=hparams_audio.hop_length / hparams_audio.sampling_rate * 1000,
         )
-        print(pitch)
         pitch = pw.stonemask(wav.astype(np.float64), pitch, t, 22050)
         
         pitch = torch.tensor(pitch[: sum(duration)])

@@ -1,7 +1,7 @@
 import typing as tp
 import torch
 
-import hw_tts.waveglow
+import hw_tts.waveglow as waveglow 
 import hw_tts.synthesis.synthesis as synthesis
 import hw_tts.synthesis.utils
 
@@ -89,7 +89,7 @@ class Trainer(BaseTrainer):
                         for p in self.model.parameters():
                             if p.grad is not None:
                                 del p.grad  # free some memory
-                        torch.cuda.empty_cache()
+                        torch.cpu.empty_cache()
                         continue
                     else:
                         raise e

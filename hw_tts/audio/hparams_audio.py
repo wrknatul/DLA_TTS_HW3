@@ -1,6 +1,6 @@
 "Link: https://github.com/NVIDIA/tacotron2/blob/master/hparams.py"
 import tensorflow as tf
-from text import symbols
+from hw_tts.text import symbols
 
 epochs=500
 iters_per_checkpoint=1000

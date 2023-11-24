@@ -1,0 +1,83 @@
+{
+    "os": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+    "python": "3.11.5",
+    "heartbeatAt": "2023-11-24T16:36:08.667533",
+    "startedAt": "2023-11-24T16:36:08.541215",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "-c",
+        "hw_tts/config.json"
+    ],
+    "state": "running",
+    "program": "/home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@github.com:wrknatul/DLA_TTS_HW3.git",
+        "commit": "44e0a72ce29e454457492de30a7756e85ac79e65"
+    },
+    "email": "wrk.natul@yandex.ru",
+    "root": "/home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3",
+    "host": "maxim-GP62-7RD",
+    "username": "maxim",
+    "executable": "/home/maxim/Documents/pythonYSAD/shad_env/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1814.45525,
+        "min": 800.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1531.255,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1519.784,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1536.803,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1499.929,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1516.837,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1523.898,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1502.238,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1531.523,
+            "min": 800.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 116.31898498535156,
+            "used": 103.91697311401367
+        }
+    },
+    "memory": {
+        "total": 7.544273376464844
+    }
+}

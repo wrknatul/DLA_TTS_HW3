@@ -1,0 +1,26 @@
+2023-11-24 19:36:08,547 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-11-24 19:36:08,547 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Configure stats pid to 49997
+2023-11-24 19:36:08,547 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Loading settings from /home/maxim/.config/wandb/settings
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Loading settings from /home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/wandb/settings
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/train.py', 'program': '/home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/train.py'}
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:_log_setup():528] Logging user logs to /home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/wandb/offline-run-20231124_193608-udlq18ut/logs/debug.log
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:_log_setup():529] Logging internal logs to /home/maxim/Documents/HW3DLA/TTS/DLA_HW3/DLA_TTS_HW3/DLA_TTS_HW3/wandb/offline-run-20231124_193608-udlq18ut/logs/debug-internal.log
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:init():568] calling init triggers
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'name': 'default_config', 'n_gpu': 0, 'arch': OrderedDict([('type', 'FastSpeech'), ('args', OrderedDict([('vocab_size', 300), ('max_seq_len', 3000), ('encoder_dim', 256), ('encoder_n_layer', 4), ('encoder_head', 2), ('encoder_conv1d_filter_size', 1024), ('decoder_dim', 256), ('decoder_n_layer', 4), ('decoder_head', 2), ('decoder_conv1d_filter_size', 1024), ('fft_conv1d_kernel', [9, 1]), ('fft_conv1d_padding', [4, 0]), ('duration_predictor_filter_size', 256), ('duration_predictor_kernel_size', 3), ('dropout', 0.1), ('PAD', 0), ('num_mels', 80), ('pitch_stat', [0.0, 870]), ('energy_stat', [0.0, 490])]))]), 'data': OrderedDict([('batch_size', 16), ('batch_expand_size', 32), ('num_workers', 5), ('dataset', OrderedDict([('type', 'BufferDataset'), ('args', OrderedDict([('data_path', './data/train.txt'), ('mel_ground_truth', './mels'), ('alignment_path', './alignments'), ('text_cleaners', ['english_cleaners'])])), ('module', 'hw_tts.datasets')]))]), 'optimizer': OrderedDict([('type', 'AdamW'), ('args', OrderedDict([('lr', 0.001), ('weight_decay', 1e-06), ('betas', [0.9, 0.98]), ('eps', 1e-09)]))]), 'loss': OrderedDict([('type', 'FastSpeechLoss'), ('args', OrderedDict())]), 'lr_scheduler': OrderedDict([('type', 'OneCycleLR'), ('args', OrderedDict([('steps_per_epoch', 800), ('epochs', 220), ('anneal_strategy', 'cos'), ('max_lr', 0.001), ('pct_start', 0.1)]))]), 'trainer': OrderedDict([('epochs', 200), ('save_dir', 'saved/'), ('save_period', 5), ('verbosity', 2), ('early_stop', 100), ('visualize', 'wandb'), ('wandb_project', 'tts_project'), ('len_epoch', 25), ('grad_norm_clip', 1)])}
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:init():618] starting backend
+2023-11-24 19:36:08,548 INFO    MainThread:49997 [wandb_init.py:init():622] setting up manager
+2023-11-24 19:36:08,554 INFO    MainThread:49997 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-11-24 19:36:08,556 INFO    MainThread:49997 [wandb_init.py:init():628] backend started and connected
+2023-11-24 19:36:08,561 INFO    MainThread:49997 [wandb_init.py:init():720] updated telemetry
+2023-11-24 19:36:08,585 INFO    MainThread:49997 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-11-24 19:36:08,592 INFO    MainThread:49997 [wandb_init.py:init():804] starting run threads in backend
+2023-11-24 19:36:08,711 INFO    MainThread:49997 [wandb_run.py:_console_start():2199] atexit reg
+2023-11-24 19:36:08,711 INFO    MainThread:49997 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-11-24 19:36:08,711 INFO    MainThread:49997 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-11-24 19:36:08,711 INFO    MainThread:49997 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-11-24 19:36:08,712 INFO    MainThread:49997 [wandb_init.py:init():845] run started, returning control to user process
+2023-11-24 19:36:09,992 WARNING MsgRouterThr:49997 [router.py:message_loop():77] message_loop has been closed
